@@ -72,11 +72,9 @@ import api from '../Api'
                  <Redirect to={this.state.redirect} /> 
                 }
                 <h1> Editar Série </h1>
-                <p> {JSON.stringify(this.state)} </p>
                 <form>
                     <input type="text" ref="name" placeholder="nome" /> 
 
-                    Status: 
                     <select ref="status">
                       { 
                           Object.keys(statuses)
@@ -84,7 +82,7 @@ import api from '../Api'
                           )
                         } 
                     </select>
-                    Generos: 
+                    
                     <select ref="genre"> { 
                         this.state.genres
                         .map( key => <option key={key} value={key}> {key} </option> 

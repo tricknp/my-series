@@ -39,25 +39,26 @@ class Home extends Component{
                 <section id="intro" className="intro-section">
                 <div className="container">
                     <div className="row">
-                    <div className="col-lg-12">
+                    <div className="col-lg-12 center">
                         <h1><img src="images/logo.png" /></h1>
-                        <p>Nunca mais esqueça uma série que você assistiu ou que alguém lhe indicou.</p>
+                        <p className="text-logo">
+                            Nunca mais esqueça uma série que você assistiu ou que alguém lhe indicou.
+                        </p>
                     </div>
                     </div>
                 </div>
                 </section> 
 
-                <section> 
+                <section className="container-genres"> 
                 { 
                     this.state.isLoading &&
-                    <span> Carregando... </span>
+                    <span> Carregando... </span> 
                 }
                 
                 {
                     !this.state.isLoading &&
-                    <div> 
-                    Ver séries do genêro:
-                    { this.state.genres.map(this.renderGenreLink) } 
+                    <div className="genres">
+                        <a className="genres-names"> { this.state.genres.map(this.renderGenreLink) } </a> 
                     </div>
                 }
                 </section>       

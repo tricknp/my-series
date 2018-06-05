@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Series from './components/Series'
 import NewSeries from './components/NewSeries'
 import EditSeries from './components/EditSeries'
+import './app.css'
 
 class App extends Component {
 
@@ -22,8 +23,8 @@ class App extends Component {
 
                 <div className="collapse navbar-collapse navbar-ex1-collapse">
                   <ul className="nav navbar-nav">
-                    <li> <Link to="/" > Home </Link> </li>
-                    <li> <Link to="/new" > Nova Série </Link> </li>
+                    <li className="li" > <Link to="/" > Home </Link> </li>
+                    <li className="li"> <Link to="/new" > Nova Série </Link> </li>
                   </ul>
                 </div>
 

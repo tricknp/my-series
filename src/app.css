@@ -1,0 +1,125 @@
+*
+{
+    background-color: #111 !important;
+    color: #d1d1d1 !important;
+    border: none;
+}
+
+.li{
+    font-size: 1.2em !important;
+}
+
+a 
+{
+    text-decoration: none !important;
+    color: #d1d1d1 !important;
+    font-weight: bold;
+}
+
+.center
+{
+    margin-top: 6%;
+}
+
+a:hover 
+{
+    color: #c53131 !important;
+}
+
+.text-logo
+{
+    font-size: 1.5em;
+}
+
+.container-genres
+{
+    border-top: 2px solid #ddd; 
+    margin-top: 10%;
+    padding-top: 3em;
+}
+
+.genres
+{
+    display: table;
+    margin: auto;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+
+.thumbnail
+{
+    width: 30em;
+}
+
+#section-series
+{
+    margin: 0 2%;
+}
+
+.list-group-image
+{
+    margin-top: 2%;
+}
+
+.btn
+{
+    border-radius: 1px;
+    margin-left: 2.5%; 
+}
+
+.div-btns
+{
+    width: 12em;
+    margin: -7.6em 18em;
+    background: transparent !important;
+}
+
+.caption
+{
+    margin: 1% 2%;
+}
+
+form
+{
+    position: absolute;
+    top: 40%;
+    left: 38%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 25%;
+}
+
+form > input
+{
+    margin-top: .4em;
+    padding: .4em;
+    text-indent: 10px;
+    border: #ddd solid 1px;
+}
+
+form > select
+{
+    margin-top: .4em;
+    padding:  .4em;
+    border: #ddd solid 1px;
+}
+
+form > button
+{
+    margin-top: .2em;
+    font-size: 1.2em;
+    border-radius: 3px;
+    border: #c53131 solid 1px;
+    background: #c53131 !important;
+    padding: .4em;
+}
+
+.not-series
+{
+    font-size: 1.5em;
+    width: 20%;
+    display: table;
+    margin: 5em auto;
+}

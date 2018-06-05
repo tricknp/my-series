@@ -49,18 +49,18 @@ import { Redirect } from 'react-router-dom'
 
       }
 
-    render(){
-        return(
-            <section className="intro-section">  
+      render(){
+          return(
+              <section className="intro-section">  
                 {
-                 this.state.redirect && 
-                 <Redirect to={this.state.redirect} /> 
+                    this.state.redirect && 
+                    <Redirect to={this.state.redirect} /> 
                 }
                 <h1> Nova Série </h1>
-                <form>
+                <form className="form">
                     <input type="text" ref="name" placeholder="nome" /> 
+                    <input type="textarea" ref="coments" placeholder="comentario" />
 
-                    Status: 
                     <select ref="status">
                       { 
                           Object.keys(statuses)
@@ -68,7 +68,7 @@ import { Redirect } from 'react-router-dom'
                           )
                         } 
                     </select>
-                    Generos: 
+                     
                     <select ref="genre"> { 
                         this.state.genres
                         .map( key => <option key={key} value={key}> {key} </option> 
@@ -76,7 +76,6 @@ import { Redirect } from 'react-router-dom'
                     } 
                     </select>
                     
-                    <input type="textarea" ref="coments" placeholder="comentario" />
                     <button onClick={this.saveSeries} type="button"> Salvar </button>
                 </form>    
             </section>
