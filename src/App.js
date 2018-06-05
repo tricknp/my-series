@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import api from './Api'
+
 class App extends Component {
 
+  constructor(props){
+    super(props)
+    
+    this.state = {
+      genres: [],
+      isLoading: false,
+    }
+  }
+
   componentWillMount(){
-    axios
-      .get('http://localhost:3001/genres')
-      .then(res => {
-        console.log(res.data);
-      })
-      .catch(err => {
-        console.log('deu ruim')
-      })
+    this.setState({ isLoading: true })
+    api.getGenres()
+       .then(res => {
+          this.setState({
+            isLoading: false,
+            genres: res.data
+          })
+       })
+  }
+
+  renderGenreLink(genre){
+    return(
+      <span>
+        <a href=""> { genre } </a>
+      </span>  
+    )
   }
 
   render() {
@@ -45,7 +63,22 @@ class App extends Component {
                 </div>
               </div>
             </div>
-          </section>        
+          </section> 
+
+          <section> 
+            { 
+              this.state.isLoading &&
+              <span> Carregando... </span>
+            }
+            
+            {
+              !this.state.isLoading &&
+              <div> 
+                Ver séries do genêro:
+                { this.state.genres.map(this.renderGenreLink) } 
+              </div>
+            }
+          </section>       
       </div>
     );
   }
