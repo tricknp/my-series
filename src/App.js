@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import Series from './components/Series'
 import NewSeries from './components/NewSeries'
+import EditSeries from './components/EditSeries'
 
 class App extends Component {
 
@@ -28,9 +29,11 @@ class App extends Component {
 
               </div>
             </nav>
-            <Route exact path="/"        component={Home}       />
-            <Route path="/series/:genre" component={Series}     />
-            <Route exact path="/new"     component={NewSeries}  />
+            
+            <Route exact path="/"         component={Home}       />
+            <Route path="/series/:genre"  component={Series}     />
+            <Route path="/series-edit/:id" component={EditSeries} /> 
+            <Route exact path="/new"      component={NewSeries}  />
 
         </div>
       </Router>

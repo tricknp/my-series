@@ -19,38 +19,10 @@
       "comments": "Bom para descontrair"
     },
     {
-      "id": 3,
-      "name": "Breaking Bad",
-      "status": "watched",
-      "genre": "Drama",
-      "comments": "Say My Name - melhor cena"
-    },
-    {
-      "id": 4,
-      "name": "Better Call Saul",
-      "status": "toWatch",
-      "genre": "Drama",
-      "comments": "Galera fala bem"
-    },
-    {
       "id": 5
     },
     {
       "id": 6
-    },
-    {
-      "name": "joao foi comprar bala",
-      "status": "toWatch",
-      "genre": "Drama",
-      "coments": "12",
-      "id": 7
-    },
-    {
-      "name": "dereguejonsons",
-      "status": "watching",
-      "genre": "Ação",
-      "coments": "saddassad",
-      "id": 8
     }
   ],
   "genres": [
