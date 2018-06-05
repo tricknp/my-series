@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom' 
 
 import api from '../Api'
 
@@ -26,8 +27,8 @@ class Home extends Component{
     
       renderGenreLink(genre){
         return(
-          <span>
-            <a href=""> { genre } </a>
+          <span key={genre}>
+            <Link to={`/series/${genre}`}> { genre } </Link>
           </span>  
         )
       }

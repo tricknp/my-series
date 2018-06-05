@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../Api'
+import { Redirect } from 'react-router-dom'
 
  const statuses = {
     'watched'  :  'Assistido',
@@ -16,6 +17,7 @@ import api from '../Api'
         this.state = {
           genres: [],
           isLoading: false,
+          redirect: false
         }
 
         this.saveSeries = this.saveSeries.bind(this)
@@ -40,7 +42,9 @@ import api from '../Api'
             coments: this.refs.coments.value
         }
         api.saveSeries(newSeries).then(res => {
-            console.log(res)
+            this.setState({
+                redirect: `/series/${this.refs.genre.value}`
+            })
         })
 
       }
@@ -48,6 +52,10 @@ import api from '../Api'
     render(){
         return(
             <section className="intro-section">  
+                {
+                 this.state.redirect && 
+                 <Redirect to={this.state.redirect} /> 
+                }
                 <h1> Nova Série </h1>
                 <form>
                     <input type="text" ref="name" placeholder="nome" /> 
