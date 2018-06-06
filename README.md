@@ -1,6 +1,5 @@
-## My-Series
+### My-Series
 
-#### Descrição
 My-series é um gerenciador de séries desenvolvido para monitorar o que você assiste, assistiu ou pretende assistir.
 ***
 
